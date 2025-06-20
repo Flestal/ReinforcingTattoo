@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<StatOffset>품질 별 능력치</StatOffset>
+    <PenaltyNeutralize>페널티 중화</PenaltyNeutralize>
+
+    <ReinforceTattooSettings>강화문신</ReinforceTattooSettings>
+    <settingAlert>* 배율 수정은 재시작을 해야 정상적으로 적용됩니다 *</settingAlert>
+    <settingCommon>강화문신 기본 능력 강화 배율: x</settingCommon>
+    <settingAwful>강화문신(끔찍) 능력 강화 배율: x</settingAwful>
+    <settingPoor>강화문신(빈약) 능력 강화 배율: x</settingPoor>
+    <settingNormal>강화문신(평범) 능력 강화 배율: x</settingNormal>
+    <settingGood>강화문신(상급) 능력 강화 배율: x</settingGood>
+    <settingExcellent>강화문신(완벽) 능력 강화 배율: x</settingExcellent>
+    <settingMasterwork>강화문신(걸작) 능력 강화 배율: x</settingMasterwork>
+    <settingLegendary>강화문신(전설) 능력 강화 배율: x</settingLegendary>
+
+    <ReinforceTattoo_SelectPartTitle>강화문신 시술 대상 신체 부위 선택</ReinforceTattoo_SelectPartTitle>
+    <ReinforceTattoo_NoEligibleParts>강화문신 시술 가능한 신체 부위가 없습니다.</ReinforceTattoo_NoEligibleParts>
+    <ReinforceTattoo_Success>강화문신 시술이 성공적으로 완료되었습니다.</ReinforceTattoo_Success>
+    <ReinforceTattoo_FailMinor>강화문신 시술이 약간 실패했습니다.</ReinforceTattoo_FailMinor>
+    <ReinforceTattoo_FailCatastrophic>강화문신 시술이 처참히 실패했습니다.</ReinforceTattoo_FailCatastrophic>
+
+</LanguageData>

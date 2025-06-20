@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<StatOffset>Bonus from Quality</StatOffset>
+    <PenaltyNeutralize>Penalty Neutralization</PenaltyNeutralize>
+
+    <ReinforceTattooSettings>Reinforcing Tattoos</ReinforceTattooSettings>
+    <settingAlert>* RESTART REQUIRED. *</settingAlert>
+    <settingCommon>Base effectiveness multiplier: x</settingCommon>
+    <settingAwful>Effectiveness multiplier (Awful): x</settingAwful>
+    <settingPoor>Effectiveness multiplier (Poor): x</settingPoor>
+    <settingNormal>Effectiveness multiplier (Normal): x</settingNormal>
+    <settingGood>Effectiveness multiplier (Good): x</settingGood>
+    <settingExcellent>Effectiveness multiplier (Excellent): x</settingExcellent>
+    <settingMasterwork>Effectiveness multiplier (Masterwork): x</settingMasterwork>
+    <settingLegendary>Effectiveness multiplier (Legendary): x</settingLegendary>
+
+    <ReinforceTattoo_SelectPartTitle>Select body part</ReinforceTattoo_SelectPartTitle>
+    <ReinforceTattoo_NoEligibleParts>There are no eligible body parts for this procedure.</ReinforceTattoo_NoEligibleParts>
+    
+    <ReinforceTattoo_Success>The reinforcing tattoo procedure was completed successfully.</ReinforceTattoo_Success>
+    <ReinforceTattoo_FailMinor>The reinforcing tattoo procedure failed, but caused no permanent damage.</ReinforceTattoo_FailMinor>
+    <ReinforceTattoo_FailCatastrophic>The reinforcing tattoo procedure was a catastrophic failure!</ReinforceTattoo_FailCatastrophic>
+
+</LanguageData>

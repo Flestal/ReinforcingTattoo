@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<ReinforceTattoo.label>강화 문신 상처</ReinforceTattoo.label>
+    <ReinforceTattoo.description>특수한 문신으로, 해당 신체 부위의 신경과 근육을 정밀하게 자극하여 능력을 강화합니다. 시술자의 솜씨에 따라 효과가 달라집니다.</ReinforceTattoo.description>
+    <ReinforceTattoo.HediffComp_GetsPermanent.permanentLabel>강화 문신</ReinforceTattoo.HediffComp_GetsPermanent.permanentLabel>
+
+</LanguageData>

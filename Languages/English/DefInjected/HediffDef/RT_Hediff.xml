@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <ReinforceTattoo.label>reinforcing tattoo wound</ReinforceTattoo.label>
+    <ReinforceTattoo.description>A special tattoo that precisely stimulates the nerves and muscles of the afflicted body part, enhancing its capabilities. Its effectiveness depends on the skill of the one who applied it.</ReinforceTattoo.description>
+    
+    <ReinforceTattoo.comps.HediffComp_GetsPermanent.permanentLabel>reinforcing tattoo</ReinforceTattoo.comps.HediffComp_GetsPermanent.permanentLabel>
+
+</LanguageData>

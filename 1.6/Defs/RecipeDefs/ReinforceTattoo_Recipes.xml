@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>Install_ReinforceTattoo</defName>
+    <label>강화 문신 시술</label>
+    <description>염료와 플라스틸을 사용하여 신체 일부에 강화 문신을 새깁니다. 문신은 신경계와 근육 조직을 영구적으로 자극하여 해당 부위의 능력을 향상시킵니다. 시술은 매우 정교한 기술을 요구하며, 의사의 의학 기술과 예술적 감각에 따라 결과가 크게 달라집니다.</description>
+    <jobString>강화 문신을 새기는 중.</jobString>
+    
+    <!-- 이 레시피의 로직을 담당할 C# 클래스 -->
+    <workerClass>ReinforceTattooMOD.Recipe_InstallReinforceTattoo</workerClass>
+    
+    <workAmount>3000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Dye</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>Dye</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    
+    <!-- C#에서 부위를 동적으로 선택하므로 여기서는 비워둡니다. -->
+    <!-- <appliedOnFixedBodyParts />  -->
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+
+    <!-- 이 레시피는 사람에게만 적용됩니다. -->
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    
+    <!-- 이 수술을 잠금 해제하는 연구 -->
+    <researchPrerequisite>ReinforceTattooResearch</researchPrerequisite>
+  </RecipeDef>
+</Defs>

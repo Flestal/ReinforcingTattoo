@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="InjuryBase">
+    <defName>ReinforceTattoo</defName>
+    <label>강화 문신 상처</label>
+    <description>특수한 문신으로, 해당 신체 부위의 신경과 근육을 정밀하게 자극하여 능력을 강화합니다. 시술자의 솜씨에 따라 효과가 달라집니다.</description>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <isBad>false</isBad> <!-- 이것은 '나쁜' Hediff가 아님 -->
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    
+    <comps>
+      <!-- 영구적인 흉터로 만드는 컴포넌트 -->
+      <li Class="HediffCompProperties_GetsPermanent">
+        <becomePermanentChanceFactor>1</becomePermanentChanceFactor>
+        <permanentLabel>강화 문신</permanentLabel>
+        <!-- isRandomQuality는 Recipe_Tattoo에서 자동으로 품질을 부여하므로 true로 설정할 필요가 없습니다. -->
+      </li>
+      
+      <!-- C#으로 커스텀 능력치를 부여하는 컴포넌트 -->
+      <li Class="ReinforceTattooMOD.HediffCompProperties_ReinforceTattoo">
+        <!-- 품질별 신체 부위 능률(Part Efficiency) 보너스 (끔찍 ~ 전설 순서) -->
+        <pctBonusPerQuality>
+          <li>0.1</li>  <!-- 끔찍 (Awful) -->
+          <li>0.2</li>  <!-- 형편없음 (Poor) -->
+          <li>0.3</li>  <!-- 평범 (Normal) -->
+          <li>0.5</li>  <!-- 상급 (Good) -->
+          <li>0.8</li>  <!-- 완벽 (Excellent) -->
+          <li>1.0</li>  <!-- 걸작 (Masterwork) -->
+          <li>2.0</li>  <!-- 전설 (Legendary) -->
+        </pctBonusPerQuality>
+      </li>
+    </comps>
+
+    <injuryProps>
+      <painPerSeverity>0</painPerSeverity> <!-- 고통 없음 -->
+      <averagePainPerSeverityPermanent>0</averagePainPerSeverityPermanent>
+      <canMerge>false</canMerge> <!-- 다른 흉터와 합쳐지지 않음 -->
+      <destroyedLabel>끔찍한 실수를 함</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>
