@@ -11,3 +11,13 @@ C:\Steam\steamapps\common\RimWorld\Mods\강화문신모드\Source\bin\Debug\net4
 C:\Steam\steamapps\common\RimWorld\Mods\강화문신모드\Source\bin\Debug\net472\ReinforceTattooMOD.pdb
 C:\Steam\steamapps\common\RimWorld\Mods\Assemblies\net472\ReinforceTattooMOD.dll
 C:\Steam\steamapps\common\RimWorld\Mods\Assemblies\net472\ReinforceTattooMOD.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\bin\Debug\net472\ReinforceTattooMOD.dll
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\bin\Debug\net472\ReinforceTattooMOD.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.AssemblyInfoInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.AssemblyInfo.cs
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMod.sourcelink.json
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMOD.dll
+C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\obj\Debug\net472\ReinforceTattooMOD.pdb

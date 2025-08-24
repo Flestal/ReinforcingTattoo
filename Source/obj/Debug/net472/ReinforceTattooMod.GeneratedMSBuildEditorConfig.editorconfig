@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = ReinforceTattooMOD
-build_property.ProjectDir = C:\Steam\steamapps\common\RimWorld\Mods\강화문신모드\Source\
+build_property.ProjectDir = C:\Steam\steamapps\common\RimWorld\Mods\ReinforcingTattoo\Source\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

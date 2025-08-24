@@ -2,17 +2,17 @@
 <Defs>
   <HediffDef ParentName="InjuryBase">
     <defName>ReinforceTattoo</defName>
-    <label>강화 문신 상처</label>
+    <label>강화 상처</label>
     <description>특수한 문신으로, 해당 신체 부위의 신경과 근육을 정밀하게 자극하여 능력을 강화합니다. 시술자의 솜씨에 따라 효과가 달라집니다.</description>
     <hediffClass>Hediff_Injury</hediffClass>
     <isBad>false</isBad> <!-- 이것은 '나쁜' Hediff가 아님 -->
-    <initialSeverity>1.0</initialSeverity>
-    <maxSeverity>1.0</maxSeverity>
+    <!-- <initialSeverity>1.0</initialSeverity> -->
+    <!-- <maxSeverity>1.0</maxSeverity> -->
     
     <comps>
       <!-- 영구적인 흉터로 만드는 컴포넌트 -->
       <li Class="HediffCompProperties_GetsPermanent">
-        <becomePermanentChanceFactor>1</becomePermanentChanceFactor>
+        <becomePermanentChanceFactor>0</becomePermanentChanceFactor>
         <permanentLabel>강화 문신</permanentLabel>
         <!-- isRandomQuality는 Recipe_Tattoo에서 자동으로 품질을 부여하므로 true로 설정할 필요가 없습니다. -->
       </li>
@@ -35,6 +35,7 @@
     <injuryProps>
       <painPerSeverity>0</painPerSeverity> <!-- 고통 없음 -->
       <averagePainPerSeverityPermanent>0</averagePainPerSeverityPermanent>
+      <bleedRate>0.02</bleedRate>
       <canMerge>false</canMerge> <!-- 다른 흉터와 합쳐지지 않음 -->
       <destroyedLabel>끔찍한 실수를 함</destroyedLabel>
     </injuryProps>

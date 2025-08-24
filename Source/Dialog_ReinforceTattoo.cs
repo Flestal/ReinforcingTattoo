@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -12,6 +13,7 @@ namespace ReinforceTattooMOD
 		private readonly Action<BodyPartRecord> onPartSelected;
 		private readonly List<BodyPartRecord> availableParts;
 		private Vector2 scrollPosition = Vector2.zero;
+		StringBuilder sb;
 
 		public override Vector2 InitialSize => new Vector2(480f, 600f);
 
@@ -19,9 +21,18 @@ namespace ReinforceTattooMOD
 		{
 			this.patient = patient;
 			this.onPartSelected = onPartSelected;
+			sb= new StringBuilder();
+			sb.Append("patient: ").Append(patient.Name);
+			Log.Message(sb.ToString());
 			// RecipeWorker에서 분리된 로직을 호출하여 선택 가능한 부위 목록을 가져옵니다.
 			this.availableParts = Recipe_InstallReinforceTattoo.GetEligibleParts(patient);
-
+			sb=new StringBuilder();
+			sb.AppendLine("availableParts:");
+			availableParts.ForEach((part) =>
+			{
+				sb.AppendLine(part.def.defName);
+			});
+			Log.Message(sb.ToString());
 			this.forcePause = true;
 			this.absorbInputAroundWindow = true;
 			this.closeOnClickedOutside = true;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReinforceTattooMOD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fc3c92d29806d57c57902a4675797a1e2145c9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReinforceTattooMOD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReinforceTattooMOD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

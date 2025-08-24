@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\강화문신모드\\Source\\ReinforceTattooMod.csproj": {}
+    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcingTattoo\\Source\\ReinforceTattooMod.csproj": {}
   },
   "projects": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\강화문신모드\\Source\\ReinforceTattooMod.csproj": {
+    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcingTattoo\\Source\\ReinforceTattooMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\강화문신모드\\Source\\ReinforceTattooMod.csproj",
+        "projectUniqueName": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcingTattoo\\Source\\ReinforceTattooMod.csproj",
         "projectName": "ReinforceTattooMOD",
-        "projectPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\강화문신모드\\Source\\ReinforceTattooMod.csproj",
+        "projectPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcingTattoo\\Source\\ReinforceTattooMod.csproj",
         "packagesPath": "C:\\Users\\limes\\.nuget\\packages\\",
-        "outputPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\강화문신모드\\Source\\obj\\",
+        "outputPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcingTattoo\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -8,22 +9,50 @@ namespace ReinforceTattooMOD
 {
     public class Recipe_InstallReinforceTattoo : RecipeWorker
     {
-        // 의약품 정책별로 선택 가능한 부위 DefName을 미리 정의합니다.
-        private static readonly List<BodyPartDef> HerbalParts = new List<BodyPartDef>
-        {
-            BodyPartDefOf.Arm, BodyPartDefOf.Leg, BodyPartDefOf.Hand, ReinforceTattooDefOf.Foot
-        };
+		// 의약품 정책별로 선택 가능한 부위 DefName을 미리 정의합니다.
+		//private static readonly List<BodyPartDef> HerbalParts = new List<BodyPartDef>
+		//{
+		//    BodyPartDefOf.Arm, BodyPartDefOf.Leg, BodyPartDefOf.Hand, ReinforceTattooDefOf.Foot
+		//};
 
-        private static readonly List<BodyPartDef> NormalParts = new List<BodyPartDef>
-        {
-            BodyPartDefOf.Eye, ReinforceTattooDefOf.Ear, ReinforceTattooDefOf.Nose, ReinforceTattooDefOf.Jaw, ReinforceTattooDefOf.Tongue
-        };
+		//private static readonly List<BodyPartDef> NormalParts = new List<BodyPartDef>
+		//{
+		//    BodyPartDefOf.Eye, ReinforceTattooDefOf.Ear, ReinforceTattooDefOf.Nose, ReinforceTattooDefOf.Jaw, ReinforceTattooDefOf.Tongue
+		//};
 
-        private static readonly List<BodyPartDef> BestParts = new List<BodyPartDef>
-        {
-            ReinforceTattooDefOf.Stomach, ReinforceTattooDefOf.Liver, BodyPartDefOf.Lung, ReinforceTattooDefOf.Kidney,
-            BodyPartDefOf.Heart, ReinforceTattooDefOf.Brain, ReinforceTattooDefOf.Spine
-        };
+		//private static readonly List<BodyPartDef> BestParts = new List<BodyPartDef>
+		//{
+		//	ReinforceTattooDefOf.Stomach, ReinforceTattooDefOf.Liver, BodyPartDefOf.Lung, ReinforceTattooDefOf.Kidney,
+		//	BodyPartDefOf.Heart, ReinforceTattooDefOf.Brain, ReinforceTattooDefOf.Spine
+		//};
+
+		private static readonly List<string> HerbalParts = new List<string>
+		{
+			"Arm",
+			"Leg", 
+			"Hand", 
+			"Foot"
+		};
+
+		private static readonly List<string> NormalParts = new List<string>
+		{
+			"Eye", 
+			"Ear", 
+			"Nose", 
+			"Jaw", 
+			"Tongue"
+		};
+
+		private static readonly List<string> BestParts = new List<string>
+		{
+			"Stomach", 
+			"Liver",
+			"Lung", 
+			"Kidney",
+			"Heart", 
+			"Brain", 
+			"Spine"
+		};
 
 		public static List<BodyPartRecord> GetEligibleParts(Pawn pawn)
 		{
@@ -42,13 +71,39 @@ namespace ReinforceTattooMOD
 				}*/
 
 				bool partAllowed = false;
-				if (medCare >= MedicalCareCategory.HerbalOrWorse && HerbalParts.Contains(part.def)) partAllowed = true;
-				if (medCare >= MedicalCareCategory.NormalOrWorse && NormalParts.Contains(part.def)) partAllowed = true;
-				if (medCare >= MedicalCareCategory.Best && BestParts.Contains(part.def)) partAllowed = true;
+				if (medCare >= MedicalCareCategory.HerbalOrWorse && HerbalParts.Contains(part.def.defName)) partAllowed = true;
+				if (medCare >= MedicalCareCategory.NormalOrWorse && NormalParts.Contains(part.def.defName)) partAllowed = true;
+				if (medCare >= MedicalCareCategory.Best && BestParts.Contains(part.def.defName)) partAllowed = true;
 
 				if (partAllowed)
 				{
 					eligibleParts.Add(part);
+				}
+				else
+				{
+					if (!HerbalParts.Contains(part.def.defName) && !NormalParts.Contains(part.def.defName) && !BestParts.Contains(part.def.defName)) 
+					{
+						Log.Message("continue : " + part.def.ToString());
+						continue; 
+					}
+					StringBuilder sb = new StringBuilder();
+					sb.Append(part.def.defName).Append(" not allowed. ");
+					sb.Append("requiredCare: ");
+					if (BestParts.Contains(part.def.defName))
+					{
+						sb.Append(MedicalCareCategory.Best.ToString());
+					}
+					if (NormalParts.Contains(part.def.defName))
+					{
+						sb.Append(MedicalCareCategory.NormalOrWorse.ToString());
+					}
+					if (HerbalParts.Contains(part.def.defName))
+					{
+						sb.Append(MedicalCareCategory.HerbalOrWorse.ToString());
+					}
+					sb.Append(", policyCare: ").Append(policyCare.ToString());
+					sb.Append(", availableCare: ").Append(availableCare.ToString());
+					Log.Message(sb.ToString());
 				}
 			}
 			return eligibleParts;
@@ -59,16 +114,20 @@ namespace ReinforceTattooMOD
 			if (map == null) return MedicalCareCategory.NoCare;
 			if (map.listerThings.ThingsOfDef(ThingDefOf.MedicineUltratech).Where(t => !t.IsForbidden(Faction.OfPlayer)).Sum(t => t.stackCount) >= 5)
 			{
+				Log.Message("Best available medicine: Ultratech");
 				return MedicalCareCategory.Best;
 			}
 			if (map.listerThings.ThingsOfDef(ThingDefOf.MedicineIndustrial).Where(t => !t.IsForbidden(Faction.OfPlayer)).Sum(t => t.stackCount) >= 5)
 			{
+				Log.Message("Best available medicine: Industrial");
 				return MedicalCareCategory.NormalOrWorse;
 			}
 			if (map.listerThings.ThingsOfDef(ThingDefOf.MedicineHerbal).Where(t => !t.IsForbidden(Faction.OfPlayer)).Sum(t => t.stackCount) >= 5)
 			{
+				Log.Message("Best available medicine: Herbal");
 				return MedicalCareCategory.HerbalOrWorse;
 			}
+			Log.Message("No available medicine");
 			return MedicalCareCategory.NoCare;
 		}
 
